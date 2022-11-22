@@ -6,11 +6,16 @@ export default function App() {
   const [ email, setEmail ] = useState("")
   const [ password, setPassword ] = useState("")
 
+  function handleLogin(event) {
+    event.preventDefault()
+  }
+
   return (
     <div className="container">
       <div className="container-login">
         <div className="wrap-login">
-          <form className="login-form">
+          <form className="login-form" onSubmit={handleLogin}>
+            
             <span className="title">
               Bem Vindo!
             </span>
@@ -45,7 +50,8 @@ export default function App() {
             <div className="create-account">
               <span>Não possui conta?</span>
 
-              <a href="#">Crie aqui.</a>
+              {/* Para fins de treino o link redireciona para o projeto no GitHub */}
+              <a href="https://github.com/dionedev/Custom-login" target="blank">Crie aqui.</a>
             </div>
           </form>
         </div>
